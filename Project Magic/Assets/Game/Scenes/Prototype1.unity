@@ -212,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19166155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.08, y: 3.53, z: -0.24687153}
+  m_LocalPosition: {x: 4.081, y: 1.413, z: -0.24687153}
   m_LocalScale: {x: 0.3364218, y: 0.32102108, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 827701753}
+  selectedFlowchart: {fileID: 1454100289}
 --- !u!4 &510808549
 Transform:
   m_ObjectHideFlags: 1
@@ -1309,7 +1309,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 68
     y: 70
-    width: 111
+    width: 112.4
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1476,7 +1476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929515751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.1, y: 2.3, z: 0}
+  m_LocalPosition: {x: -4.58, y: 1.61, z: 0}
   m_LocalScale: {x: 0.12213673, y: 0.12213673, z: 0.12213673}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2077,6 +2077,11 @@ GameObject:
   - component: {fileID: 1454100295}
   - component: {fileID: 1454100294}
   - component: {fileID: 1454100293}
+  - component: {fileID: 1454100302}
+  - component: {fileID: 1454100301}
+  - component: {fileID: 1454100300}
+  - component: {fileID: 1454100299}
+  - component: {fileID: 1454100298}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2308,7 +2313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 41
   indentLevel: 0
-  storyText: Test 2 successful
+  storyText: 'Hey, thanks for bringing this back to me. '
   description: 
   character: {fileID: 260343254}
   portrait: {fileID: 0}
@@ -2346,7 +2351,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1454100302}
+  - {fileID: 1454100298}
   - {fileID: 1454100261}
+  - {fileID: 1454100301}
+  - {fileID: 1454100300}
+  - {fileID: 1454100299}
   suppressAllAutoSelections: 0
 --- !u!114 &1454100263
 MonoBehaviour:
@@ -3119,8 +3129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 30
   indentLevel: 0
-  storyText: 'If you can bring me my hammer, I''ll give you a shield. I don''t have
-    many left, so it won''t be the best, but it will be something. '
+  storyText: 'If you can bring my armour, I''ll give it to you. It won''t be the
+    best, but it will be something. '
   description: 
   character: {fileID: 260343254}
   portrait: {fileID: 0}
@@ -3147,8 +3157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  storyText: Listen, I can't just give you the shield, I know you don't have the
-    money for it. But I dropped my hammer on the way here this morning.
+  storyText: Listen, I can't just give you some armour, I know you don't have the
+    money for it. But I dropped my personal armour on the way here this morning.
   description: 
   character: {fileID: 260343254}
   portrait: {fileID: 0}
@@ -3262,7 +3272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  storyText: Fine, screw the shield. I'll do this without your help!
+  storyText: Fine, screw the armour. I'll do this without your help!
   description: 
   character: {fileID: 1344338127}
   portrait: {fileID: 0}
@@ -3372,7 +3382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 21
   indentLevel: 0
-  storyText: 'Whoa there, kiddo. What could you possibly need a shield for? '
+  storyText: 'Whoa there, kiddo. What could you possibly need armour for? '
   description: 
   character: {fileID: 260343254}
   portrait: {fileID: 0}
@@ -3399,7 +3409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  storyText: I need a shield, Garou.
+  storyText: I need a piece or armour, Garou.
   description: 
   character: {fileID: 1344338127}
   portrait: {fileID: 0}
@@ -3556,7 +3566,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 467
-    y: 84
+    y: 83
     width: 118.8
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3631,9 +3641,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1454100287}
+  - {fileID: 1454100262}
   selectedCommands:
-  - {fileID: 1454100293}
+  - {fileID: 1454100299}
   variables:
   - {fileID: 1454100270}
   - {fileID: 1454100259}
@@ -3862,6 +3872,153 @@ MonoBehaviour:
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
   facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1454100298
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454100256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 55
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1344338127}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 4f8713336e3c27546af003a4b8fdfbd9, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1517419630}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1454100299
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454100256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 54
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 260343254}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1454100300
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454100256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 53
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 1344338127}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1454100301
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454100256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 52
+  indentLevel: 0
+  storyText: 'As a reward, you keep it. Good luck out there. '
+  description: 
+  character: {fileID: 260343254}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1454100302
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454100256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 51
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 260343254}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 6d6fc2419e033be498369eae505edd9b, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1960552317}
+  facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
