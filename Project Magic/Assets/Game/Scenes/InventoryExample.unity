@@ -391,9 +391,9 @@ MonoBehaviour:
     type: 3}
   SwordSprite: {fileID: 21300000, guid: af3c0f431f6db2341a9a2ff132e588ad, type: 3}
   ShieldSprite: {fileID: 21300000, guid: 96511f6fcf08b584fae768ba48194177, type: 3}
-  HealingPotionSprite: {fileID: 21300000, guid: 10efbeab2b02de042a0e1e91f67a18a8,
+  HealingPotionSprite: {fileID: 21300000, guid: 4531a34adc6354f40a6fc2f4161da72d,
     type: 3}
-  FirePotionSprite: {fileID: 21300000, guid: ae4fa47792e23bc40b4ff0ddd4223f37, type: 3}
+  FirePotionSprite: {fileID: 21300000, guid: 584e93c020b0a594087fe42dbb2f8614, type: 3}
   GoldSprite: {fileID: 21300000, guid: 455002f2bb1b632488cac02294601bdd, type: 3}
   ArmourSprite: {fileID: 21300000, guid: af3c0f431f6db2341a9a2ff132e588ad, type: 3}
 --- !u!4 &358932574
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    itemType: 0
+    itemType: 3
     amount: 1
 --- !u!4 &1227810597
 Transform:
