@@ -49,8 +49,6 @@ public class Inventory
 
     public void RemoveItem(Item item)
     {
-        if (item.IsStackable())
-        {
             Item itemRemove = null;
             foreach (Item invItem in itemList)
             {
@@ -62,13 +60,8 @@ public class Inventory
             }
             if (itemRemove != null && itemRemove.amount <= 0)
             {
-                itemList.Remove(item);
+                itemList.Remove(itemRemove);
             }
-        }
-        else
-        {
-            itemList.Remove(item);
-        }
 
         onItemListChanged?.Invoke(this, EventArgs.Empty);       
         Debug.Log("Item Removed");
