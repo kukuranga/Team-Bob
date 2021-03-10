@@ -36,12 +36,11 @@ public class UI_Inventory : MonoBehaviour
     //locates all item slots in grid array
     private void RefreshInventoryItems()
     {
-        
-        foreach(Transform t in itemSlotContainer)
+
+        foreach (Transform t in itemSlotContainer)
         {
-            if (t == itemSlotTemplate)
-                continue;
-            Destroy(t.gameObject);
+            if (t == itemSlotTemplate)continue;
+                Destroy(t.gameObject);
         }
 
         int x = 0;
@@ -51,6 +50,13 @@ public class UI_Inventory : MonoBehaviour
         {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
+
+            //Onclick function
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () => 
+            {
+                inventory.UseItem(item);
+            };
+
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();

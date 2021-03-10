@@ -10,11 +10,6 @@ using UnityEngine.UI;
  */
 public class PlayerController : MonoBehaviour
 {
-    //Inventory information
-    //private Inventory inventory;
-    //[SerializeField]
-    //private UI_Inventory uiIinventory;
-    //public KeyCode OpenInventory;
 
 
     // Movement related variables 
@@ -56,24 +51,6 @@ public class PlayerController : MonoBehaviour
       public Animator animator;
 
 
-    //public void Awake()
-    //{
-    //    inventory = new Inventory();
-    //    uiIinventory.SetInventory(inventory);
-    //}
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
-    //    if (itemWorld != null)
-    //    {
-    //        //Touching Item
-    //        inventory.AddItem(itemWorld.GetItem());
-    //        itemWorld.Despawn();
-    //    }
-
-    //}
-
     // Start is called before the first frame update
     void Start()
       {
@@ -112,13 +89,6 @@ public class PlayerController : MonoBehaviour
 
       }
 
-    //private void ToggleInventory()
-    //{
-    //    if (Input.GetKey(OpenInventory))
-    //    {
-    //        uiIinventory.gameObject.SetActive(true);
-    //    }
-    //}
 
     //This function will apply a friction vector to the movement vector in order to slow down the player
     private void applyFriction()
