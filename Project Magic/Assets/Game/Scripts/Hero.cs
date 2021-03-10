@@ -10,6 +10,8 @@ public class Hero : MonoBehaviour
     [SerializeField]
     private UI_Inventory uiIinventory;
 
+    public Fungus.Flowchart myFlowchart;
+
     public void Awake()
     {
         inventory = new Inventory();
@@ -24,8 +26,11 @@ public class Hero : MonoBehaviour
         {
             //Touching Item
             inventory.AddItem(itemWorld.GetItem());
+            myFlowchart.ExecuteBlock("New Block3");
             itemWorld.Despawn();
         }
         
     }
+
+    
 }

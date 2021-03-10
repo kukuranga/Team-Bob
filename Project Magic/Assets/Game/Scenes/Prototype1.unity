@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiIinventory: {fileID: 2089147779}
+  myFlowchart: {fileID: 1454100289}
 --- !u!1 &195355728
 GameObject:
   m_ObjectHideFlags: 0
