@@ -8,12 +8,13 @@ public class Inventory
 
     public event EventHandler onItemListChanged;
     private List<Item> itemList;
+    private Action<Item> useAction;
   
 
-    public Inventory()
+    public Inventory(Action<Item> useAction)
     {
-        itemList = new List<Item>();
-
+        this.useAction = useAction;
+        itemList = new List<Item>();       
         //test
         //AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
         //AddItem(new Item { itemType = Item.ItemType.Helmet, amount = 1 });
@@ -44,6 +45,38 @@ public class Inventory
 
         onItemListChanged?.Invoke(this, EventArgs.Empty);
         Debug.Log("Item Collected");
+    }
+
+    public void RemoveItem(Item item)
+    {
+            Item itemRemove = null;
+            foreach (Item invItem in itemList)
+            {
+                if (invItem.itemType == item.itemType)
+                {
+                    invItem.amount -= item.amount;
+                    itemRemove = invItem;
+                }
+            }
+            if (itemRemove != null && itemRemove.amount <= 0)
+            {
+                itemList.Remove(itemRemove);
+            }
+
+        onItemListChanged?.Invoke(this, EventArgs.Empty);       
+        Debug.Log("Item Removed");
+    }
+    
+    public bool SearchItem(Item item)
+    {
+        if (itemList.Contains(item))
+            return true;
+        return false;
+    }
+
+    public void UseItem(Item item)
+    {
+        useAction(item);
     }
 
     public List<Item> GetItemList()
