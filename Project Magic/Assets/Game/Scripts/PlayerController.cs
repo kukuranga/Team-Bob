@@ -9,8 +9,15 @@ using UnityEngine;
  */
 public class PlayerController : MonoBehaviour
 {
-      // Movement related variables 
-      public float acceleration; // This value will determin how fast the player accelerates to full speed
+    //Inventory information
+    //private Inventory inventory;
+
+    //[SerializeField]
+    //private UI_Inventory uiIinventory;
+
+
+    // Movement related variables 
+    public float acceleration; // This value will determin how fast the player accelerates to full speed
       public float maxVerticalSpeed; // This value is the max vertical speed the player can reach
       public float maxHorizontalSpeed; // This value is the max horizontal speed the player can reach
       public float friction; // The value will be the ammount of friction 
@@ -38,9 +45,26 @@ public class PlayerController : MonoBehaviour
       public Animator animator;
 
 
+    //public void Awake()
+    //{
+    //    inventory = new Inventory();
+    //    uiIinventory.SetInventory(inventory);
+    //}
 
-      // Start is called before the first frame update
-      void Start()
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
+    //    if (itemWorld != null)
+    //    {
+    //        //Touching Item
+    //        inventory.AddItem(itemWorld.GetItem());
+    //        itemWorld.Despawn();
+    //    }
+
+    //}
+
+    // Start is called before the first frame update
+    void Start()
       {
             //Defult Key values for now are WASD
             //Can be changed in the future with public so player can acsess them in a settings menu later on
@@ -221,10 +245,6 @@ public class PlayerController : MonoBehaviour
       private void healthSystem()
       {
             
-      }
-
-      private void OnTriggerEnter2D(Collider2D collision)
-      {
       }
 
       public void Damage(float dmg)

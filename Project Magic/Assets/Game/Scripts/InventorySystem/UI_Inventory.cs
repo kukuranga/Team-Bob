@@ -7,15 +7,18 @@ using TMPro;
 public class UI_Inventory : MonoBehaviour
 {
     public int SpaceBetweenItemSlot;
+    public GameObject ItemsTemplate;
+    public GameObject ISlotTemplate;
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
 
     private void Awake()
     {
-        itemSlotContainer = transform.Find("ItemsTemplate");
-        itemSlotTemplate = itemSlotContainer.Find("itemsSlotTemplate");
-
+        //itemSlotContainer = transform.Find("ItemsTemplate");
+        //itemSlotTemplate = itemSlotContainer.Find("itemsSlotTemplate");
+        itemSlotContainer = ItemsTemplate.transform;
+        itemSlotTemplate = ISlotTemplate.transform;
     }
     public void SetInventory(Inventory inventory)
     {
@@ -33,6 +36,7 @@ public class UI_Inventory : MonoBehaviour
     //locates all item slots in grid array
     private void RefreshInventoryItems()
     {
+        
         foreach(Transform t in itemSlotContainer)
         {
             if (t == itemSlotTemplate)

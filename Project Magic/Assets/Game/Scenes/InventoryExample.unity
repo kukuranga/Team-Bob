@@ -394,8 +394,8 @@ MonoBehaviour:
   HealingPotionSprite: {fileID: 21300000, guid: 4531a34adc6354f40a6fc2f4161da72d,
     type: 3}
   FirePotionSprite: {fileID: 21300000, guid: 584e93c020b0a594087fe42dbb2f8614, type: 3}
-  GoldSprite: {fileID: 21300000, guid: 455002f2bb1b632488cac02294601bdd, type: 3}
-  ArmourSprite: {fileID: 21300000, guid: af3c0f431f6db2341a9a2ff132e588ad, type: 3}
+  GoldSprite: {fileID: 21300000, guid: 430e13f012ed5554fb695d6aa125ae8f, type: 3}
+  ArmourSprite: {fileID: 21300000, guid: f23b3296e69576b4488de8230ba84f78, type: 3}
 --- !u!4 &358932574
 Transform:
   m_ObjectHideFlags: 0
@@ -715,9 +715,9 @@ GameObject:
   - component: {fileID: 1017926597}
   - component: {fileID: 1017926596}
   - component: {fileID: 1017926595}
-  - component: {fileID: 1017926593}
   - component: {fileID: 1017926598}
   - component: {fileID: 1017926599}
+  - component: {fileID: 1017926594}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -725,7 +725,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1017926593
+--- !u!114 &1017926594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1478,6 +1478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpaceBetweenItemSlot: 50
+  ItemsTemplate: {fileID: 2038380384}
+  ISlotTemplate: {fileID: 776791262}
 --- !u!1 &2038380384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1513,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -383.1, y: -0.0000021458}
+  m_AnchoredPosition: {x: -383.1, y: -0}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
