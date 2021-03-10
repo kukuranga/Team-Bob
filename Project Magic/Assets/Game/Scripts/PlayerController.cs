@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
  * Author: Benjamin Kerr
@@ -12,10 +13,10 @@ public class PlayerController : MonoBehaviour
 
 
     // Movement related variables 
-    public float acceleration; // This value will determin how fast the player accelerates to full speed
-      public float maxVerticalSpeed; // This value is the max vertical speed the player can reach
-      public float maxHorizontalSpeed; // This value is the max horizontal speed the player can reach
-      public float friction; // The value will be the ammount of friction 
+      [Range(0.0f, 10.0f)]public float acceleration; // This value will determin how fast the player accelerates to full speed
+      [Range(0.0f, 10.0f)]public float maxVerticalSpeed; // This value is the max vertical speed the player can reach
+      [Range(0.0f, 10.0f)]public float maxHorizontalSpeed; // This value is the max horizontal speed the player can reach
+      [Range(0.0f, 10.0f)]public float friction; // The value will be the ammount of friction 
       private Vector3 movementVector; // The vector the player will move in
       private Vector3 frictionVector; // The vector will control the speed at which the player will slow down
       public Rigidbody2D rigidbody; // 2D rigid body of the player game object
@@ -36,6 +37,16 @@ public class PlayerController : MonoBehaviour
       [System.NonSerialized] public int healthSize; // varriable will be responisble for controlling the health of the player
 
 
+      // Stat related variables
+      [System.NonSerialized] public int attackStat;
+      [System.NonSerialized] public int defenceStat;
+      [System.NonSerialized] public int coinStat;
+
+      [SerializeField] private Text attackText;
+      [SerializeField] private Text defenceText;
+      [SerializeField] private Text coinText;
+
+
       // Animation related variables
       public Animator animator;
 
@@ -43,6 +54,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
       {
+            attackStat = 2;
+            defenceStat = 5;
+            coinStat = 8;
             //Defult Key values for now are WASD
             //Can be changed in the future with public so player can acsess them in a settings menu later on
             moveForward = KeyCode.W;
@@ -54,6 +68,8 @@ public class PlayerController : MonoBehaviour
             healthSize = 0; 
 
             healthSize = 0;
+
+            updateStats();
             
       }
 
@@ -234,4 +250,22 @@ public class PlayerController : MonoBehaviour
             return movementVector;
       }
 
+      public void updateStats()
+      {
+            attackText.text = ": " + attackStat;
+            defenceText.text = ": " + defenceStat;
+            coinText.text = ": " + coinStat;
+      }
+
+      public int addStat(int value)
+      {
+            value += 1;
+            return value;
+      }
+
+      public int subtractStat(int value)
+      {
+            value -= 1;
+            return value;
+      }
 }
