@@ -15,6 +15,7 @@ public class ItemWorld : MonoBehaviour
         return itemWorld;
     }
 
+
     private Item item;
     private SpriteRenderer spriteRenderer;
 
