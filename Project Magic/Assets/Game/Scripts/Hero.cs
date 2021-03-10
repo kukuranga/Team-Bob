@@ -15,10 +15,6 @@ public class Hero : MonoBehaviour
         inventory = new Inventory();
         uiIinventory.SetInventory(inventory);
 
-        //testing
-        //ItemWorld.SpawnItemWorld(new Vector3(5, 0), new Item { itemType = Item.ItemType.Sword , amount = 1 });
-        //ItemWorld.SpawnItemWorld(new Vector3(-5, 0), new Item { itemType = Item.ItemType.boots, amount = 1 });
-        //ItemWorld.SpawnItemWorld(new Vector3(5, -2), new Item { itemType = Item.ItemType.Helmet, amount = 1 });
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
