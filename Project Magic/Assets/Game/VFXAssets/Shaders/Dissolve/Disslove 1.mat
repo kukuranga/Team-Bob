@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Disslove 1
+  m_Shader: {fileID: -6465566751694194690, guid: 1cf95a79a53847a418401e220fc4055d,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_19A84E16:
+        m_Texture: {fileID: 2800000, guid: 80b8b83d233eb594d9c98038e2ea8fcb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_29CF82E2:
+        m_Texture: {fileID: 2800000, guid: 780749c9b78d44f4e96a456e0d3f9200, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_4E3F6586:
+        m_Texture: {fileID: 2800000, guid: 39586d0fd6c35b541ac0632676f2dbad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_85778621_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 780749c9b78d44f4e96a456e0d3f9200, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_A7D070FD_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 780749c9b78d44f4e96a456e0d3f9200, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_19844D48: 0.77
+    - Vector1_42BDF15E: -60.08
+    - Vector1_4B10994E: 1
+    - Vector1_7F91A339: 16.53
+    - Vector1_915C647B: 0.56
+    - Vector1_932E34D9: -0.05
+    - Vector1_AE7CAC91: 0
+    m_Colors:
+    - Color_B25D59A3: {r: 3.069276, g: 0.1315404, b: 0, a: 1}

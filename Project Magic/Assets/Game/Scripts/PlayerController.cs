@@ -25,16 +25,17 @@ public class PlayerController : MonoBehaviour
 
 
       //Setup key variables
-      [System.NonSerialized] public KeyCode moveForward; //This key will move the player forward
-      [System.NonSerialized] public KeyCode moveBackwards; // This key will move the player backwards
-      [System.NonSerialized] public KeyCode moveRight; //This key will move the player to the right
-      [System.NonSerialized] public KeyCode moveLeft; // This key will move the player left
+      [SerializeField] public KeyCode moveForward; //This key will move the player forward
+      [SerializeField] public KeyCode moveBackwards; // This key will move the player backwards
+      [SerializeField] public KeyCode moveRight; //This key will move the player to the right
+      [SerializeField] public KeyCode moveLeft; // This key will move the player left
       //Movement related variables ^
 
 
 
       //Health related variables
-      [System.NonSerialized] public int healthSize; // varriable will be responisble for controlling the health of the player
+      [SerializeField] public int healthSize = 100; // varriable will be responisble for controlling the health of the player
+      [SerializeField] public int CurrentHealth;
 
 
       // Stat related variables
@@ -45,18 +46,19 @@ public class PlayerController : MonoBehaviour
       [SerializeField] private Text attackText;
       [SerializeField] private Text defenceText;
       [SerializeField] private Text coinText;
+      [SerializeField] public Slider slider;
 
 
-      // Animation related variables
-      public Animator animator;
+    // Animation related variables
+    public Animator animator;
 
 
     // Start is called before the first frame update
     void Start()
       {
-            attackStat = 2;
-            defenceStat = 5;
-            coinStat = 8;
+            attackStat = 20;
+            defenceStat = 50;
+            coinStat = 0;
             //Defult Key values for now are WASD
             //Can be changed in the future with public so player can acsess them in a settings menu later on
             moveForward = KeyCode.W;
@@ -65,9 +67,9 @@ public class PlayerController : MonoBehaviour
             moveLeft = KeyCode.A;
             frictionVector = new Vector3(friction, friction);
 
-            healthSize = 0; 
-
-            healthSize = 0;
+            healthSize = 100;
+            CurrentHealth = healthSize;
+            
 
             updateStats();
             
@@ -86,6 +88,8 @@ public class PlayerController : MonoBehaviour
             applyFriction(); // This method will slow the player down by applying friction
             transform.Translate(movementVector * Time.deltaTime); // The last step is to translate the player in the correct vector
             //animatePlayerMovement(); // Animate the players animation
+
+            updateStats();
 
       }
 
@@ -240,10 +244,19 @@ public class PlayerController : MonoBehaviour
             
       }
 
-      public void Damage(float dmg)
+      public void Damage(int dmg)
       {
-
+        CurrentHealth -= dmg;
+        if (CurrentHealth < 0)
+            CurrentHealth = 0;
       }
+
+    public void heal(int heal)
+    {
+        CurrentHealth += heal;
+        if (CurrentHealth > healthSize)
+            CurrentHealth = healthSize;
+    }
 
       public Vector3 getMovementVector()
       {
@@ -252,20 +265,26 @@ public class PlayerController : MonoBehaviour
 
       public void updateStats()
       {
-            attackText.text = ": " + attackStat;
-            defenceText.text = ": " + defenceStat;
-            coinText.text = ": " + coinStat;
+            attackText.text = ": " + attackStat.ToString();
+            defenceText.text = ": " + defenceStat.ToString();
+            coinText.text = ": " + coinStat.ToString();
+            slider.value = (CurrentHealth / 100);
       }
 
-      public int addStat(int value)
-      {
-            value += 1;
-            return value;
-      }
+    public void AddAttack( int atk)
+    {
+        attackStat += atk;
+    }
 
-      public int subtractStat(int value)
-      {
-            value -= 1;
-            return value;
-      }
+    public void AddArmour( int def)
+    {
+        defenceStat += def;
+    }
+
+    public void AddCoin(int coin)
+    {
+        coinStat += coin;
+        if (coinStat < 0)
+            coinStat = 0;
+    }
 }

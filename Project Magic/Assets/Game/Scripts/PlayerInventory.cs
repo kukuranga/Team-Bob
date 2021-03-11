@@ -9,6 +9,7 @@ public class PlayerInventory : MonoBehaviour
 
     [SerializeField]
     private UI_Inventory uiIinventory;
+    private PlayerController pc;
 
     public GameObject UICanvas;
     public Fungus.Flowchart myFlowchart;
@@ -18,6 +19,7 @@ public class PlayerInventory : MonoBehaviour
     {
         inventory = new Inventory(UseItem);
         uiIinventory.SetInventory(inventory);
+        pc = GetComponent<PlayerController>();
 
     }
 
@@ -50,32 +52,37 @@ public class PlayerInventory : MonoBehaviour
     private void UseSword()
     {
         //Equip Sword
+        pc.AddAttack(100);
         inventory.RemoveItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
     }
     private void UseShield()
     {
         //Equip Shield
+        pc.AddArmour(50);
         inventory.RemoveItem(new Item { itemType = Item.ItemType.Shield, amount = 1 });
     }
     private void UseArmour()
     {
         //Equip Armour
+        pc.AddArmour(100);
         inventory.RemoveItem(new Item { itemType = Item.ItemType.Armour, amount = 1 });
     }
     private void UseFirePotion()
     {
         //Set fire
+        pc.heal(-50);
         inventory.RemoveItem(new Item { itemType = Item.ItemType.FirePotion, amount = 1 });
     }
     private void UseHealingPotion()
     {
         //heal player
+        pc.heal(50);
         inventory.RemoveItem(new Item { itemType = Item.ItemType.HealingPotion, amount = 1 });
     }
     private void UseGold()
     {
-
-        //inventory.RemoveItem(new Item { itemType = Item.ItemType.Gold, amount = 1 });
+        pc.AddCoin(1);
+        inventory.RemoveItem(new Item { itemType = Item.ItemType.Gold, amount = 1 });
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
