@@ -47,15 +47,22 @@ public class PlayerController : MonoBehaviour
       [SerializeField] private Text defenceText;
       [SerializeField] private Text coinText;
       [SerializeField] public Slider slider;
+      public bool canMove;
+      public bool playerCanMoveLeft;
+      public bool playerCanMoveRight;
+      public bool playerCanMoveUp;
+      public bool playerCanMoveDown;
 
 
     // Animation related variables
     public Animator animator;
+    public GameObject[] Objects;
 
 
     // Start is called before the first frame update
     void Start()
       {
+            canMove = true;
             attackStat = 20;
             defenceStat = 50;
             coinStat = 0;
@@ -70,8 +77,10 @@ public class PlayerController : MonoBehaviour
             healthSize = 100;
             CurrentHealth = healthSize;
             
+            canPlayerMove(true);
+            //updateStats();
 
-            updateStats();
+            Objects = GameObject.FindGameObjectsWithTag("NonPushable");
             
       }
 
@@ -83,13 +92,25 @@ public class PlayerController : MonoBehaviour
       // Fixed Update called before everything else so move player here to account for physic objects
       private void FixedUpdate()
       {
+            for(int i = 0; i < Objects.Length; i++)
+            {
+                  float distance = Vector2.Distance(Objects[i].transform.position,transform.position);
+                  if(distance <= 1.5f)
+                  {
+                        checkIfPlayerCanMove(Objects[i]);
+                  }
+            }
             movePlayer(); // This method will determin what direction the player is moving in
 
             applyFriction(); // This method will slow the player down by applying friction
-            transform.Translate(movementVector * Time.deltaTime); // The last step is to translate the player in the correct vector
+            if(canMove == true)
+            {
+                  transform.Translate(movementVector * Time.deltaTime); // The last step is to translate the player in the correct vector
+            }
+            canPlayerMove(true);
             //animatePlayerMovement(); // Animate the players animation
 
-            updateStats();
+            //updateStats();
 
       }
 
@@ -143,7 +164,7 @@ public class PlayerController : MonoBehaviour
             //print("(" + movementVector.x + "," + movementVector.y + ")");
 
 
-            if (Input.GetKey(moveForward)) // If the player wants to move forward
+            if (Input.GetKey(moveForward) && playerCanMoveUp == true) // If the player wants to move forward
             {
                   movementVector.y += acceleration; // Increase the movement vector's y component positivley
                   if (movementVector.y >= maxVerticalSpeed) // We need to check if we are over the max speed so we do not infiniatly accelerate
@@ -154,7 +175,7 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            if (Input.GetKey(moveBackwards)) // If the player wants to move forward
+            if (Input.GetKey(moveBackwards) && playerCanMoveDown == true) // If the player wants to move forward
             {
                   movementVector.y -= acceleration; // Increase the movement vector's y component positivley
                   if (Mathf.Abs(movementVector.y) >= maxVerticalSpeed) // We need to check if we are over the max speed so we do not infiniatly accelerate
@@ -164,7 +185,7 @@ public class PlayerController : MonoBehaviour
                   }
             }
 
-            if (Input.GetKey(moveRight)) // If the player wants to move to the right
+            if (Input.GetKey(moveRight) && playerCanMoveRight) // If the player wants to move to the right
             {
                   movementVector.x += acceleration; // Increases the movement vector's x component positivly
                   if (movementVector.x >= maxHorizontalSpeed) // We need to check if we are over the max speed so we do not infiniatly accelerate
@@ -174,7 +195,7 @@ public class PlayerController : MonoBehaviour
                   }
             }
 
-            if (Input.GetKey(moveLeft)) // If the player wants to move to the right
+            if (Input.GetKey(moveLeft) && playerCanMoveLeft == true) // If the player wants to move to the right
             {
                   movementVector.x -= acceleration; // Increases the movement vector's x component positivly
                   if (Mathf.Abs(movementVector.x) >= maxHorizontalSpeed) // We need to check if we are over the max speed so we do not infiniatly accelerate
@@ -287,4 +308,67 @@ public class PlayerController : MonoBehaviour
         if (coinStat < 0)
             coinStat = 0;
     }
+
+     public void canPlayerMove(bool determinator)
+    {
+        playerCanMoveDown = determinator;
+        playerCanMoveUp = determinator;
+        playerCanMoveRight = determinator;
+        playerCanMoveLeft = determinator;
+    }
+
+      public void checkIfPlayerCanMove(GameObject gameObject)
+    {
+            if (inRange(gameObject,-5,false)) // Player is to the left
+            {
+                  //print("Player to left");
+                  playerCanMoveRight = false;
+            }
+            else if (inRange(gameObject,5,false)) // Player is to the right
+            {
+                  //print("Player to right");
+                  playerCanMoveLeft = false;
+            }
+            else if (inRange(gameObject,5,true)) //Player is above 
+            {
+                  //print("Player above");
+                  playerCanMoveDown = false;
+            }
+            else if (inRange(gameObject,-5,true)) // Player is below
+            {
+                  //print("Player below");
+                  playerCanMoveUp = false;
+            }
+    }
+
+    private bool inRange(GameObject stationaryObject, float distanceAway, bool isVertical)
+      {
+            Vector2 a = stationaryObject.transform.position;
+            Vector2 b;
+            Vector2 c;
+            Vector2 p = transform.position;
+            float angle = 45 * Mathf.Deg2Rad;
+            // r^2 = x^2 + y^2
+            if(isVertical == true)
+            {
+                  b = new Vector2(a.x + distanceAway/Mathf.Tan(angle),a.y + distanceAway);
+                  c = new Vector2(a.x - distanceAway/Mathf.Tan(angle),a.y + distanceAway);
+            }
+            else{
+                  b = new Vector2(a.x + distanceAway, a.y + distanceAway/Mathf.Tan(angle));
+                  c = new Vector2(a.x + distanceAway, a.y - distanceAway/Mathf.Tan(angle));
+            }
+
+            float w1 = (a.x * (c.y - a.y) + (p.y - a.y) * (c.x - a.x) - p.x * (c.y - a.y)) / ((b.y - a.y) * (c.x - a.x) - (b.x - a.x) * (c.y - a.y));
+            float w2 = (p.y - a.y - w1 * (b.y - a.y)) / (c.y - a.y);
+
+            if (w1 >= 0 && w2 >= 0 && (w1 + w2) <= 1)
+            {
+                  return true;
+            }
+            else
+            {
+                  return false;
+            }
+      }
 }
