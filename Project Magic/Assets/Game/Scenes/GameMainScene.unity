@@ -14740,6 +14740,21 @@ PrefabInstance:
       propertyPath: defenceText
       value: 
       objectReference: {fileID: 708853322}
+    - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: acceleration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: maxVerticalSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: maxHorizontalSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4370134899753006039, guid: 8d48859cf6acf2542b4f8295c77bf777,
         type: 3}
       propertyPath: m_FlipX
@@ -22063,7 +22078,7 @@ MonoBehaviour:
   Camera: {fileID: 1253386127}
   Player: {fileID: 1319833941}
   offset: {x: 0, y: 0, z: -10}
-  Speed: 0.8
+  Speed: 2
 --- !u!81 &1253386130
 AudioListener:
   m_ObjectHideFlags: 0
