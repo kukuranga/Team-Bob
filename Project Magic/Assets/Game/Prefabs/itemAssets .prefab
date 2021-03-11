@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfItemWorld: {fileID: 3896656075454996713, guid: f579b707f08f033418128048be28a916,
     type: 3}
-  SwordSprite: {fileID: 21300000, guid: af3c0f431f6db2341a9a2ff132e588ad, type: 3}
-  ShieldSprite: {fileID: 21300000, guid: 96511f6fcf08b584fae768ba48194177, type: 3}
+  SwordSprite: {fileID: 21300000, guid: d2e695caa2679a74395c893ec354da0b, type: 3}
+  ShieldSprite: {fileID: 21300000, guid: 2b9b672b23f27d147bd9c1029c31615e, type: 3}
   HealingPotionSprite: {fileID: 21300000, guid: 4531a34adc6354f40a6fc2f4161da72d,
     type: 3}
   FirePotionSprite: {fileID: 21300000, guid: 584e93c020b0a594087fe42dbb2f8614, type: 3}

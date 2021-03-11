@@ -12,8 +12,7 @@ public class PlayerInventory : MonoBehaviour
     private PlayerController pc;
 
     public GameObject UICanvas;
-    public Fungus.Flowchart myFlowchart;
-    public Shader prefab;
+    //public Fungus.Flowchart myFlowchart;
     public KeyCode openInventory;
 
     public void Start()
@@ -93,7 +92,7 @@ public class PlayerInventory : MonoBehaviour
         {
             //Touching Item
             inventory.AddItem(itemWorld.GetItem());
-            myFlowchart.ExecuteBlock("New Block3");
+            //myFlowchart.ExecuteBlock("New Block3");
             itemWorld.Despawn();
         }
         
