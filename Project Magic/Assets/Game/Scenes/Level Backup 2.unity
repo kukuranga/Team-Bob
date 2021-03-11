@@ -288,6 +288,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
         type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 523267046}
+    - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 778097632}
+    - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: attackText
+      value: 
+      objectReference: {fileID: 1991877923}
+    - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: defenceText
+      value: 
+      objectReference: {fileID: 1841786548}
+    - target: {fileID: 4370134899753006038, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
       propertyPath: maxVerticalSpeed
       value: 4
       objectReference: {fileID: 0}
@@ -1198,6 +1218,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &523267046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 161579788, guid: 390d24fab4da80c4d92dc5630e24bee3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2057630676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &523756511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,6 +2703,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &778097632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2051430756, guid: 390d24fab4da80c4d92dc5630e24bee3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2057630676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &798174313
 GameObject:
   m_ObjectHideFlags: 0
@@ -11196,6 +11240,18 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &1841786548 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 617652570, guid: 390d24fab4da80c4d92dc5630e24bee3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2057630676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1892020934
 GameObject:
   m_ObjectHideFlags: 0
@@ -11340,6 +11396,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910691754}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1991877923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1967980201, guid: 390d24fab4da80c4d92dc5630e24bee3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2057630676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1996297601
 GameObject:
   m_ObjectHideFlags: 0
