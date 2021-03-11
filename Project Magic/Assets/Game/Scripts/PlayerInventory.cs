@@ -11,6 +11,10 @@ public class PlayerInventory : MonoBehaviour
     private UI_Inventory uiIinventory;
     private PlayerController pc;
 
+    public bool hasSword;
+    public bool hasShield;
+    public bool hasArmour;
+
     public GameObject UICanvas;
     //public Fungus.Flowchart myFlowchart;
     public KeyCode openInventory;
@@ -20,6 +24,9 @@ public class PlayerInventory : MonoBehaviour
         inventory = new Inventory(UseItem);
         uiIinventory.SetInventory(inventory);
         pc = GetComponent<PlayerController>();
+        hasSword = false;
+        hasShield = false;
+        hasArmour = false;
 
     }
 
@@ -43,7 +50,7 @@ public class PlayerInventory : MonoBehaviour
                 UseHealingPotion();
                 break;
             case Item.ItemType.Gold:
-                UseGold();
+                UseGold(item.amount);
                 break;
         }
     }
@@ -53,36 +60,39 @@ public class PlayerInventory : MonoBehaviour
     {
         //Equip Sword
         pc.AddAttack(100);
-        inventory.RemoveItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
+        hasSword = true;
+        //inventory.RemoveItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
     }
     private void UseShield()
     {
         //Equip Shield
         pc.AddArmour(50);
-        inventory.RemoveItem(new Item { itemType = Item.ItemType.Shield, amount = 1 });
+        hasShield = true;
+        //inventory.RemoveItem(new Item { itemType = Item.ItemType.Shield, amount = 1 });
     }
     private void UseArmour()
     {
         //Equip Armour
         pc.AddArmour(100);
-        inventory.RemoveItem(new Item { itemType = Item.ItemType.Armour, amount = 1 });
+        hasArmour = true;
+        //inventory.RemoveItem(new Item { itemType = Item.ItemType.Armour, amount = 1 });
     }
     private void UseFirePotion()
     {
         //Set fire
-        pc.heal(-50);
-        inventory.RemoveItem(new Item { itemType = Item.ItemType.FirePotion, amount = 1 });
+        //pc.heal(-50);
+        //inventory.RemoveItem(new Item { itemType = Item.ItemType.FirePotion, amount = 1 });
     }
     private void UseHealingPotion()
     {
         //heal player
-        pc.heal(50);
-        inventory.RemoveItem(new Item { itemType = Item.ItemType.HealingPotion, amount = 1 });
+        //pc.heal(50);
+        //inventory.RemoveItem(new Item { itemType = Item.ItemType.HealingPotion, amount = 1 });
     }
-    private void UseGold()
+    private void UseGold(int num)
     {
-        pc.AddCoin(1);
-        inventory.RemoveItem(new Item { itemType = Item.ItemType.Gold, amount = 1 });
+        pc.AddCoin(num);
+        inventory.RemoveItem(new Item { itemType = Item.ItemType.Gold, amount = num });
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -91,7 +101,7 @@ public class PlayerInventory : MonoBehaviour
         if(itemWorld != null)
         {
             //Touching Item
-            inventory.AddItem(itemWorld.GetItem());
+            AddUseItem(itemWorld.GetItem());
             //myFlowchart.ExecuteBlock("New Block3");
             itemWorld.Despawn();
         }
@@ -103,6 +113,23 @@ public class PlayerInventory : MonoBehaviour
         {
             UICanvas.SetActive(!(UICanvas.active));
         }
+        flowchartLogic();
     }
+    private void flowchartLogic()
+    {
+        if(hasSword && hasShield)
+        {
 
+        }
+        if(hasArmour)
+        {
+
+        }
+
+    }
+    private void AddUseItem(Item item)
+    {
+        inventory.AddItem(item);
+        UseItem(item);
+    }
 }
