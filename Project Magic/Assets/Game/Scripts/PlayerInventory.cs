@@ -13,6 +13,7 @@ public class PlayerInventory : MonoBehaviour
 
     public GameObject UICanvas;
     public Fungus.Flowchart myFlowchart;
+    public Shader prefab;
     public KeyCode openInventory;
 
     public void Start()
