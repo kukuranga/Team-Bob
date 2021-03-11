@@ -16,7 +16,9 @@ public class PlayerInventory : MonoBehaviour
     public bool hasArmour;
 
     public GameObject UICanvas;
-    //public Fungus.Flowchart myFlowchart;
+    public Fungus.Flowchart blackSmithFlowchart;
+    public Fungus.Flowchart WarriorFlowchart;
+    public Fungus.Flowchart exitGuardFlowchart;
     public KeyCode openInventory;
 
     public void Start()
@@ -117,13 +119,23 @@ public class PlayerInventory : MonoBehaviour
     }
     private void flowchartLogic()
     {
-        if(hasSword && hasShield)
+        if (hasSword)
         {
-
+            WarriorFlowchart.ExecuteBlock("New Block3");
+            exitGuardFlowchart.ExecuteBlock("SwordCheck");
+            hasSword = false;
+        }
+        if (hasShield)
+        {
+            WarriorFlowchart.ExecuteBlock("New Block3");
+            exitGuardFlowchart.ExecuteBlock("ShieldCheck");
+            hasShield = false;
         }
         if(hasArmour)
         {
-
+            blackSmithFlowchart.ExecuteBlock("New Block3");
+            exitGuardFlowchart.ExecuteBlock("ArmourCheck");
+            hasArmour = false;
         }
 
     }

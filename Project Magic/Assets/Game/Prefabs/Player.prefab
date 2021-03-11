@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2739060746920101731}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiIinventory: {fileID: 0}
+  hasSword: 0
+  hasShield: 0
+  hasArmour: 0
   UICanvas: {fileID: 0}
-  myFlowchart: {fileID: 0}
-  openInventory: 27
+  blackSmithFlowchart: {fileID: 0}
+  WarriorFlowchart: {fileID: 0}
+  exitGuardFlowchart: {fileID: 0}
+  openInventory: 9
 --- !u!114 &4370134899753006038
 MonoBehaviour:
   m_ObjectHideFlags: 0

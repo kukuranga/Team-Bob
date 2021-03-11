@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -381,6 +381,26 @@ PrefabInstance:
       propertyPath: uiIinventory
       value: 
       objectReference: {fileID: 2057630677}
+    - target: {fileID: 4370134899753006043, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: openInventory
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370134899753006043, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: WarriorFlowchart
+      value: 
+      objectReference: {fileID: 1996297642}
+    - target: {fileID: 4370134899753006043, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: exitGuardFlowchart
+      value: 
+      objectReference: {fileID: 337485958}
+    - target: {fileID: 4370134899753006043, guid: 8d48859cf6acf2542b4f8295c77bf777,
+        type: 3}
+      propertyPath: blackSmithFlowchart
+      value: 
+      objectReference: {fileID: 993242292}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d48859cf6acf2542b4f8295c77bf777, type: 3}
 --- !u!1 &99848520
@@ -1637,7 +1657,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 266
     y: 71
-    width: 118.8
+    width: 117
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2321,7 +2341,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 69
-    width: 112.4
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2364,7 +2384,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 337485957}
+  - {fileID: 337485945}
   selectedCommands: []
   variables:
   - {fileID: 337485949}
@@ -2824,7 +2844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1996297642}
+  selectedFlowchart: {fileID: 337485958}
 --- !u!4 &478349378
 Transform:
   m_ObjectHideFlags: 1
@@ -9584,7 +9604,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 214.20001
     y: 165
-    width: 161.2
+    width: 159
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9791,7 +9811,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 213.09998
     y: 104
-    width: 118.8
+    width: 117
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10035,7 +10055,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 48
     y: 115
-    width: 120.4
+    width: 119
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11202,7 +11222,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 212
     y: 49
-    width: 154
+    width: 152
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11244,7 +11264,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 56
     y: 52
-    width: 112.4
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
