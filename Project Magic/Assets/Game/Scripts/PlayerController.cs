@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+      void Start()
       {
             attackStat = 2;
             defenceStat = 5;
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
             healthSize = 0;
 
-            updateStats();
+            //updateStats();
             
       }
 
