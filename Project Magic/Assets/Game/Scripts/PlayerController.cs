@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
                   transform.Translate(movementVector * Time.deltaTime); // The last step is to translate the player in the correct vector
             }
             canPlayerMove(true);
-            //animatePlayerMovement(); // Animate the players animation
+            animatePlayerMovement(); // Animate the players animation
 
             //updateStats();
 
@@ -222,10 +222,12 @@ public class PlayerController : MonoBehaviour
                         if (movementVector.x > 0)
                         {
                               animator.SetInteger("direction", 2);
+                              transform.localScale = new Vector3(0.1534959f, 0.1534959f,0.1534959f);
                         }
                         else if (movementVector.x < 0)
                         {
-                              animator.SetInteger("direction", 4);
+                              animator.SetInteger("direction", 2);
+                              transform.localScale = new Vector3(0.1534959f * -1, 0.1534959f,0.1534959f);
                         }
                   }
                   else if (movementVector.y > 0)
@@ -234,10 +236,12 @@ public class PlayerController : MonoBehaviour
                         if (movementVector.x > 0)
                         {
                               animator.SetInteger("direction", 2);
+                              transform.localScale = new Vector3(0.1534959f, 0.1534959f,0.1534959f);
                         }
                         else if (movementVector.x < 0)
                         {
-                              animator.SetInteger("direction", 4);
+                              animator.SetInteger("direction", 2);
+                              transform.localScale = new Vector3(0.1534959f * -1, 0.1534959f,0.1534959f);
                         }
                   }
                   else if (movementVector.y == 0)
@@ -245,10 +249,12 @@ public class PlayerController : MonoBehaviour
                         if (movementVector.x > 0)
                         {
                               animator.SetInteger("direction", 2);
+                              transform.localScale = new Vector3(0.1534959f, 0.1534959f,0.1534959f);
                         }
                         else if (movementVector.x < 0)
                         {
-                              animator.SetInteger("direction", 4);
+                              animator.SetInteger("direction", 2);
+                              transform.localScale = new Vector3(0.1534959f * -1, 0.1534959f,0.1534959f);
                         }
                   }
             }
