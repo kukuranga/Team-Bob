@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
             canPlayerMove(true);
             animatePlayerMovement(); // Animate the players animation
 
-            //updateStats();
+            updateStats();
 
       }
 
