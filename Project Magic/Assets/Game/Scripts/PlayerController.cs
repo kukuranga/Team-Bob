@@ -46,10 +46,11 @@ public class PlayerController : MonoBehaviour
       [SerializeField] private Text attackText;
       [SerializeField] private Text defenceText;
       [SerializeField] private Text coinText;
+      [SerializeField] public Slider slider;
 
 
-      // Animation related variables
-      public Animator animator;
+    // Animation related variables
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -267,6 +268,7 @@ public class PlayerController : MonoBehaviour
             attackText.text = ": " + attackStat.ToString();
             defenceText.text = ": " + defenceStat.ToString();
             coinText.text = ": " + coinStat.ToString();
+            slider.value = (CurrentHealth / 100);
       }
 
     public void AddAttack( int atk)
