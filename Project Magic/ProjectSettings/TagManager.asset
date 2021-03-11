@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - pfItemWorld
+  - Pushable
+  - NonPushable
   layers:
   - Default
   - TransparentFX
