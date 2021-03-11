@@ -1,18 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string level = "FinalSceneTest";
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D Colider)
     {
-        
+        if (Colider.gameObject.tag == "Player");
+        SceneManager.LoadScene(level);
     }
 }
