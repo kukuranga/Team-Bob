@@ -73,7 +73,7 @@ public class SnowMovement : MonoBehaviour
       private void checkIfMoving()
       {
             float distance = Vector2.Distance(transform.position,player.transform.position);
-            if(distance <= 1 && isMoving == false)
+            if(distance <= 1.5f && isMoving == false)
             {
                   checkPlayerPositionStatus();
                   checkIfStatic(this.gameObject);
@@ -87,7 +87,7 @@ public class SnowMovement : MonoBehaviour
             Vector2 b;
             Vector2 c;
             Vector2 p = player.transform.position;
-            float angle = 20 * Mathf.Deg2Rad;
+            float angle = 45 * Mathf.Deg2Rad;
             // r^2 = x^2 + y^2
             if(isVertical == true)
             {
