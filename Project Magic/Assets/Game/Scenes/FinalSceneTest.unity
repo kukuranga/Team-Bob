@@ -154,7 +154,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: d33dc86e3e21ae6449dc32fc71de0c15, type: 3}
+  - {fileID: 21300000, guid: 3cc2ef09cb2e0524cb081ace37557689, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 28e0b29fb80a38743b901f43e3b30ef3, type: 3}
+  - {fileID: 21300000, guid: c14e0b43125c6754182400ef9bdc9d7a, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: add961a11a923034f94f6ee8341946e8, type: 3}
+  - {fileID: 21300000, guid: e907f8a085c0c8949bcb312ddb111da1, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
@@ -2988,6 +2988,8 @@ GameObject:
   - component: {fileID: 1692501485}
   - component: {fileID: 1692501484}
   - component: {fileID: 1692501445}
+  - component: {fileID: 1692501487}
+  - component: {fileID: 1692501466}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3081,7 +3083,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1692501482}
   selectedCommands:
-  - {fileID: 1692501478}
+  - {fileID: 1692501470}
   variables: []
   description: 
   stepPause: 0
@@ -3200,14 +3202,14 @@ MonoBehaviour:
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
   offset: 0
-  fromPosition: {fileID: 923594130}
-  toPosition: {fileID: 2067590252}
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
   facing: 0
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
   shiftOffset: {x: 0, y: 0}
-  move: 1
+  move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
 --- !u!114 &1692501453
@@ -3230,14 +3232,14 @@ MonoBehaviour:
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
   offset: 0
-  fromPosition: {fileID: 1744747111}
-  toPosition: {fileID: 782783978}
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
   facing: 0
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
   shiftOffset: {x: 0, y: 0}
-  move: 1
+  move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
 --- !u!114 &1692501454
@@ -3255,7 +3257,7 @@ MonoBehaviour:
   itemId: 9
   indentLevel: 0
   storyText: Then prepare yourself insect. Pray to whatever gods you have that your
-    end if swift.
+    end is swift.
   description: 
   character: {fileID: 1340447483}
   portrait: {fileID: 0}
@@ -3449,7 +3451,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1340447483}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 28e0b29fb80a38743b901f43e3b30ef3, type: 3}
+  portrait: {fileID: 21300000, guid: c14e0b43125c6754182400ef9bdc9d7a, type: 3}
   offset: 0
   fromPosition: {fileID: 923594130}
   toPosition: {fileID: 2067590252}
@@ -3552,6 +3554,36 @@ MonoBehaviour:
   orthoSizeTweenType: 4
   posTweenType: 4
   rotTweenType: 4
+--- !u!114 &1692501466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692501444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 6982549}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 3cc2ef09cb2e0524cb081ace37557689, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 782783978}
+  facing: 2
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!114 &1692501467
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3568,13 +3600,13 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 1593187034}
+  character: {fileID: 1661821332}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: d33dc86e3e21ae6449dc32fc71de0c15, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
-  toPosition: {fileID: 2067590252}
-  facing: 1
+  toPosition: {fileID: 782783978}
+  facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
@@ -3598,13 +3630,13 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 1792038465}
+  character: {fileID: 1358645848}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: add961a11a923034f94f6ee8341946e8, type: 3}
+  portrait: {fileID: 21300000, guid: e907f8a085c0c8949bcb312ddb111da1, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
-  toPosition: {fileID: 782783978}
-  facing: 2
+  toPosition: {fileID: 2067590252}
+  facing: 1
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
@@ -3655,7 +3687,7 @@ MonoBehaviour:
   itemId: 33
   indentLevel: 0
   storyText: 'It''s fine, they''re gonna get hit with a curse after the battle to
-    bring then down to 2nd level, to keep you guys at the same place. '
+    bring them down to 2nd level, to keep you guys at the same place. '
   description: 
   character: {fileID: 1358645848}
   portrait: {fileID: 0}
@@ -3767,7 +3799,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You're really going to try and kill us off on session two of a campaign?
   description: 
-  character: {fileID: 1358645848}
+  character: {fileID: 6982549}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3820,7 +3852,7 @@ MonoBehaviour:
   itemId: 27
   indentLevel: 0
   storyText: Listen, the fetch quests for the potion and the gold took longer than
-    I alotted for. I have work tomorrow, so we ned to wrap up now, and we'll kick
+    I alotted for. I have work tomorrow, so we need to wrap up now, and we'll kick
     off the session with the fight next week.
   description: 
   character: {fileID: 1358645848}
@@ -3904,7 +3936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 24
   indentLevel: 0
-  storyText: What? Come on, Bob was just about to find the dragon!
+  storyText: What? Come on, Bob was just about to fight the dragon!
   description: 
   character: {fileID: 1661821332}
   portrait: {fileID: 0}
@@ -3931,7 +3963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 23
   indentLevel: 0
-  storyText: If their character join up with you mid fight, you might... MIGHT manage
+  storyText: If their characters join up with you mid fight, you might... MIGHT manage
     to survive.
   description: 
   character: {fileID: 1358645848}
@@ -4001,6 +4033,8 @@ MonoBehaviour:
   - {fileID: 1692501481}
   - {fileID: 1692501467}
   - {fileID: 1692501479}
+  - {fileID: 1692501487}
+  - {fileID: 1692501466}
   - {fileID: 1692501478}
   - {fileID: 1692501476}
   - {fileID: 1692501475}
@@ -4104,6 +4138,36 @@ MonoBehaviour:
   display: 2
   stage: {fileID: 0}
   character: {fileID: 1358645848}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1692501487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692501444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 1661821332}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
   offset: 0

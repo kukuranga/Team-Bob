@@ -1293,7 +1293,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 7805926}
   selectedCommands:
-  - {fileID: 7805921}
+  - {fileID: 7805944}
   variables:
   - {fileID: 7805930}
   - {fileID: 7805929}
@@ -5707,7 +5707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  storyText: Yes, kid? What brings you outhere to the tower?
+  storyText: Yes, kid? What brings you out here to the tower?
   description: 
   character: {fileID: 1586231504}
   portrait: {fileID: 0}
@@ -5910,7 +5910,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 227628602}
   selectedCommands:
-  - {fileID: 227628601}
+  - {fileID: 227628596}
   variables:
   - {fileID: 227628617}
   - {fileID: 227628584}
@@ -9179,8 +9179,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 307052487}
-  selectedCommands:
-  - {fileID: 307052481}
+  selectedCommands: []
   variables:
   - {fileID: 307052502}
   - {fileID: 307052480}
@@ -11062,7 +11061,7 @@ MonoBehaviour:
   itemId: 22
   indentLevel: 0
   storyText: I don't have any sword on me but my own, and you can't have that. But
-    a few weeks back, i left my practice sword out on the Island to the east.
+    a few weeks back, i left my practice sword out at the clearing to the east.
   description: 
   character: {fileID: 2141149919}
   portrait: {fileID: 0}
@@ -11314,9 +11313,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 313686575}
+  - {fileID: 313686605}
   selectedCommands:
-  - {fileID: 313686571}
+  - {fileID: 313686596}
   variables:
   - {fileID: 313686594}
   - {fileID: 313686593}
@@ -16399,7 +16398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 50
   indentLevel: 0
-  storyText: Just going for a walk
+  storyText: Just going for a walk.
   description: 
   character: {fileID: 1059162695}
   portrait: {fileID: 0}
@@ -25015,7 +25014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1110363236}
+  selectedFlowchart: {fileID: 7805939}
 --- !u!4 &1072323665
 Transform:
   m_ObjectHideFlags: 1
@@ -26906,7 +26905,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1079752815}
   selectedCommands:
-  - {fileID: 1079752811}
+  - {fileID: 1079752847}
   variables:
   - {fileID: 1079752831}
   - {fileID: 1079752806}
@@ -27247,7 +27246,7 @@ MonoBehaviour:
   portrait: {fileID: 21300000, guid: 4011a84055aff0842b70476ca8d02459, type: 3}
   offset: 0
   fromPosition: {fileID: 975854896}
-  toPosition: {fileID: 975854896}
+  toPosition: {fileID: 714656740}
   facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
@@ -27388,7 +27387,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1098913441}
   selectedCommands:
-  - {fileID: 1098913434}
+  - {fileID: 1098913437}
   variables: []
   description: 
   stepPause: 0
@@ -29493,9 +29492,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1110363199}
+  - {fileID: 1110363234}
   selectedCommands:
-  - {fileID: 1110363195}
+  - {fileID: 1110363207}
   variables:
   - {fileID: 1110363218}
   - {fileID: 1110363217}
@@ -30922,7 +30921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 63
   indentLevel: 0
-  storyText: Head to the forst, following the road west of town, or head south until
+  storyText: Head to the forest, following the road west of town, or head south until
     the path splits. Now leave me to my work.
   description: 
   character: {fileID: 671111028}
@@ -30977,7 +30976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 60
   indentLevel: 0
-  storyText: Thanks Wizard
+  storyText: Thanks Wizard.
   description: 
   character: {fileID: 1059162695}
   portrait: {fileID: 0}
@@ -31080,7 +31079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 56
   indentLevel: 0
-  storyText: Where is the Ef again?
+  storyText: Where is the Elf again?
   description: 
   character: {fileID: 1059162695}
   portrait: {fileID: 0}
@@ -31765,7 +31764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  storyText: I'm not sure where in the forst they will be, but it shouldn't be too
+  storyText: I'm not sure where in the forest they will be, but it shouldn't be too
     hard to find them.
   description: 
   character: {fileID: 671111028}
@@ -32100,9 +32099,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1211668187}
+  - {fileID: 1211668164}
   selectedCommands:
-  - {fileID: 1211668156}
+  - {fileID: 1211668155}
   variables:
   - {fileID: 1211668150}
   - {fileID: 1211668154}
@@ -37671,7 +37670,7 @@ MonoBehaviour:
   portrait: {fileID: 21300000, guid: 4b7dc706e38b3a1418c9b6c7ac0f363e, type: 3}
   offset: 0
   fromPosition: {fileID: 975854896}
-  toPosition: {fileID: 975854896}
+  toPosition: {fileID: 714656740}
   facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
@@ -38811,7 +38810,7 @@ MonoBehaviour:
   portrait: {fileID: 21300000, guid: d33dc86e3e21ae6449dc32fc71de0c15, type: 3}
   offset: 0
   fromPosition: {fileID: 975854896}
-  toPosition: {fileID: 975854896}
+  toPosition: {fileID: 714656740}
   facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
